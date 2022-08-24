@@ -5,6 +5,6 @@ node_modules/
 easy/
 hard/
 medium/
-generate.js/
+generate.js
 package-lock.json
 package.json
