@@ -23,6 +23,6 @@
     },
     "homepage": "https://github.com/bradhanson/coderbyte#readme",
     "dependencies": {
-        "jest": "^23.2.0"
+        "jest": "28.1.3"
     }
 }

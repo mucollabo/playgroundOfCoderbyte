@@ -1,3 +1,10 @@
 coverage/
 node_modules/
 .DS_Store
+.idea/
+easy/
+hard/
+medium/
+generate.js/
+package-lock.json
+package.json
