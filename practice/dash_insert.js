@@ -10,18 +10,19 @@
  */
 
 function dash_insert(str) {
-    let split_str = str.split('');
-    for(let i=0;i<split_str.length-1;i++) {
-        if((Number(split_str[i])+Number(split_str[i+1]))%2 === 0 && Number(split_str[i])%2 !== 0) {
-            split_str.splice(i+1, 0, '-')
+    let result = [];
+    for(let i=0;i<str.length;i++) {
+        result.push(str[i]);
+        if((Number(str[i])+Number(str[i+1]))%2 === 0 && Number(str[i])%2 !== 0) {
+            result.push('-');
         }
     }
-    return split_str.join('');
+    return result.join('');
 }
 
-console.log(dash_insert('454793'));
-console.log(dash_insert('02468'));
-console.log(dash_insert('123456789'));
-console.log(dash_insert(''));
-console.log(dash_insert('7'));
-console.log(dash_insert('45794793'));
+console.log(dash_insert('454793'));     // expect 4547-9-3
+console.log(dash_insert('02468'));      // expect 02468
+console.log(dash_insert('123456789'));  // expect 123456789
+console.log(dash_insert(''));           // expect ''
+console.log(dash_insert('7'));          // expect 7
+console.log(dash_insert('45794793'));   // expect 45-7-947-9-3
