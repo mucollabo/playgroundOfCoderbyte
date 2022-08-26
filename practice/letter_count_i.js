@@ -20,11 +20,10 @@ function letter_count_i(str) {
         if(eq_cnt < word.length - (new Set(word)).size) {
             eq_cnt = eq_cnt < word.length - (new Set(word)).size;
             grNumWord = word;
-            return grNumWord;
+            // return grNumWord;
         }
     }
-    if(eq_cnt === 0) {grNumWord = '-1'}
-    return grNumWord;
+    return eq_cnt === 0 ? -1 : grNumWord;
 }
 
 console.log(letter_count_i("Today, is the greatest day ever!"));
